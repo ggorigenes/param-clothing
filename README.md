@@ -1,24 +1,27 @@
 # Param Clothing Line
 
-Param is a framework-free PHP and MySQL ecommerce project with one shared login and role-based areas for buyers, administrators, Customer Service, and Delivery staff.
+Param is a custom, framework-free PHP and MySQL e-commerce platform featuring a buyer storefront and role-based dashboards for administrators, Customer Service, and Delivery staff.
 
-## Current areas
+## My Role: Lead Front-End Developer
+I designed and developed the front-end interfaces for this project using HTML, CSS, and Bootstrap. My work focused on creating responsive, mobile-first layouts, user-friendly product displays, and the UI for the role-based dashboards.
 
-- Administrator dashboard: users, products, inventory, reports, staff applications, and audit logs
-- Customer Service dashboard: concerns, replies, limited order information, and refund escalation
-- Delivery dashboard: assigned deliveries, masked customer contact details, status updates, notes, and proof paths
-- Buyer storefront: reserved at `my-php-app/public/index.php` and scheduled for the next implementation phase
+## Current Areas
 
-## Local setup
+- **Buyer Storefront:** Responsive product catalog and user interface.
+- **Administrator Dashboard:** UI for managing users, products, inventory, reports, staff applications, and audit logs.
+- **Customer Service Dashboard:** Interface for managing concerns, replies, and refund escalation.
+- **Delivery Dashboard:** Mobile-friendly layouts for assigned deliveries, status updates, and proof paths.
+
+## Local Setup
 
 1. Start Apache and MySQL in XAMPP.
 2. Import `my-php-app/db/database_schema.sql` into MySQL.
 3. Configure database access in `my-php-app/src/config/database.php`.
 4. Copy the mail settings from `.env.example` into local environment variables or a gitignored `src/config/mail.local.php`.
-5. Open `/Param/my-php-app/public/login.php` through Apache.
+5. Open `/Param/my-php-app/public/index.php` through Apache to view the storefront.
 
-Development administrator: `admin@param.test` / `Admin@12345`. Change this temporary password before deployment.
+**Development administrator:** `admin@param.test` / `Admin@12345`
 
 ## Security
 
-Never commit `mail.local.php`, SMTP credentials, production database passwords, or generated account-setup links. Protected pages and APIs enforce active sessions, CSRF checks, and database-backed RBAC permissions.
+Protected pages and APIs enforce active sessions, CSRF checks, and database-backed RBAC permissions. SMTP credentials and production database passwords are strictly excluded from version control.
